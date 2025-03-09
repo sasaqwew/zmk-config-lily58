@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -59,11 +60,11 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                  &kp F1  &kp F2    &kp F3     &kp F4     &kp F5     &kp F6
-&kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6                  &kp N7  &kp N8    &kp N9     &kp N0     &kp MINUS  &kp EQUAL
-&kp Q   &kp W   &kp E   &kp R   &kp T   &kp Y                   &kp U   &kp I     &kp O      &kp P      &kp LBKT   &kp RBKT
-&kp A   &kp S   &kp D   &kp F   &kp G   &kp H   &kp J    &kp K  &kp L   &kp SEMI  &kp APOS   &kp ENTER  &kp BSLH   &kp BSPC
-                        &kp Z   &kp X   &kp C   &kp V    &kp B  &kp N   &kp M     &kp COMMA
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5          &kp F6                  &kp F1  &kp F2    &kp F3     &kp F4     &kp F5     &kp F6
+&kp N1  &kp N2  &kp N3  &kp N4  &bt BT_CLR_ALL  &kp N6                  &kp N7  &kp N8    &kp N9     &kp N0     &kp MINUS  &kp EQUAL
+&kp Q   &kp W   &kp E   &kp R   &kp T           &kp Y                   &kp U   &kp I     &kp O      &kp P      &kp LBKT   &kp RBKT
+&kp A   &kp S   &kp D   &kp F   &kp G           &kp H   &kp J    &kp K  &kp L   &kp SEMI  &kp APOS   &kp ENTER  &kp BSLH   &kp BSPC
+                        &kp Z   &kp X           &kp C   &kp V    &kp B  &kp N   &kp M     &kp COMMA
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
