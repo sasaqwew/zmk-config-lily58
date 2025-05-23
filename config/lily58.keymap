@@ -5,7 +5,6 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -13,9 +12,21 @@
         compatible = "zmk,combos";
 
         combo_esc {
-            timeout-ms = <50>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
+            layers = <0>;
+        };
+
+        skob {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <31 32>;
+            layers = <0 1>;
+        };
+
+        skobb {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <32 33>;
+            layers = <0 1>;
         };
     };
 
@@ -51,7 +62,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        eng {
             // ------------------------------------------------------------------------------------------------------------
             // |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   `   |
             // |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   -   |
@@ -60,23 +71,35 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4   &kp F5    &kp F6                            &kp F1     &kp F2     &kp F3     &kp F4   &kp F5    &kp F6
-&kp N1  &kp Q   &kp W   &kp E    &kp R     &kp T                             &kp Y      &kp U      &kp I      &kp O    &kp P     &kp EQUAL
-&kp Q   &kp A   &kp A   &kp S    &kp D     &kp F                             &kp G      &kp H      &kp J      &kp K    &kp L     &kp RBKT
-&kp A   &kp Z   &kp X   &kp C    &kp V     &kp B      &kp LALT    &kp ENTER  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BSPC
-                        &kp TAB  &kp BSPC  &kp LSHFT  &to 1       &kp SPACE  &kp LCTRL  &kp COMMA  &kp DOT
+&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE                         &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+&kp SPACE  &kp Q      &kp W      &kp E      &kp R      &kp T                             &kp Y      &kp U      &kp I      &kp O      &kp P      &kp SPACE
+&kp SPACE  &kp A      &kp S      &kp D      &kp F      &kp G                             &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SPACE
+&kp SPACE  &kp Z      &kp X      &kp C      &kp V      &kp B      &kp LALT    &kp ENTER  &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp SPACE
+                                 &kp TAB    &kp BSPC   &kp LSHFT  &to 1       &kp SPACE  &kp LCTRL  &kp COMMA  &kp DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
-        layer_1 {
+        num {
             bindings = <
-&bt BT_CLR_ALL  &kp F2    &kp F3     &kp F4   &kp F5    &kp F6                            &kp F1     &kp MINUS  &kp F3   &kp EQUAL  &kp F5    &kp F6
-&kp N1          &kp APOS  &kp COMMA  &kp DOT  &kp P     &kp Y                             &kp F      &kp N7     &kp N8   &kp N9     &kp FSLH  &kp BSLH
-&kp Q           &kp A     &kp O      &kp E    &kp U     &kp I                             &kp D      &kp N4     &kp N5   &kp N6     &kp S     &kp RBKT
-&kp A           &kp SEMI  &kp Q      &kp J    &kp K     &kp X      &kp LALT    &kp SPACE  &kp B      &kp N1     &kp N2   &kp N3     &kp Z     &kp BSPC
-                                     &kp TAB  &kp BSPC  &kp LSHFT  &to 0       &kp ENTER  &kp LCTRL  &kp COMMA  &kp DOT
+&kp T  &kp T  &kp T     &kp T           &kp T      &kp T                             &kp T            &kp T         &kp T       &kp T   &kp T          &kp T
+&kp T  &kp T  &kp T     &kp UP          &kp T      &kp T                             &kp KP_ASTERISK  &kp N7        &kp N8      &kp N9  &kp KP_DIVIDE  &kp T
+&kp T  &kp T  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &kp T                             &kp KP_PLUS      &kp N4        &kp N5      &kp N6  &kp KP_MINUS   &kp T
+&kp T  &kp T  &kp T     &kp T           &kp T      &kp T      &kp LALT    &kp SPACE  &kp T            &kp N1        &kp N2      &kp N3  &kp KP_EQUAL   &kp T
+                        &kp TAB         &kp BSPC   &kp LSHFT  &to 0       &kp ENTER  &kp LCTRL        &kp KP_COMMA  &kp KP_DOT
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+        };
+
+        rus {
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4   &kp F5    &kp F6                            &kp F1     &kp F2     &kp F3     &kp F4   &kp F5    &kp F6
+&kp N1  &kp Q   &kp W   &kp E    &kp R     &kp T                             &kp Y      &kp U      &kp I      &kp O    &kp P     &kp EQUAL
+&kp Q   &kp A   &kp S   &kp D    &kp F     &kp G                             &kp H      &kp J      &kp K      &kp L    &kp SEMI  &kp RBKT
+&kp A   &kp Z   &kp X   &kp C    &kp V     &kp B      &kp LALT    &kp ENTER  &kp N      &kp M      &kp COMMA  &kp DOT  &kp FSLH  &kp BSPC
+                        &kp TAB  &kp BSPC  &kp LSHFT  &to 1       &kp SPACE  &kp LCTRL  &kp COMMA  &kp DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
