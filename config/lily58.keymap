@@ -29,7 +29,7 @@
             layers = <0 1>;
         };
 
-        bspace {
+        del {
             bindings = <&kp BACKSPACE>;
             key-positions = <21 22>;
         };
@@ -37,21 +37,33 @@
         x {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <33 34>;
+            layers = <0>;
         };
 
         hard {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <45 46>;
+            layers = <0>;
         };
 
-        question {
-            bindings = <&kp QUESTION>;
+        questionRus {
+            bindings = <&kp AMPERSAND>;
             key-positions = <19 20>;
         };
 
         opaa {
             bindings = <&kp EXCLAMATION>;
             key-positions = <20 21>;
+        };
+
+        scoben {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <19 20>;
+        };
+
+        scobenn {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <19 20>;
         };
     };
 
@@ -96,14 +108,12 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE                         &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-&kp SPACE  &kp Q      &kp W      &kp E      &kp R      &kp T                             &kp Y      &kp U      &kp I      &kp O      &kp P      &kp SPACE
-&kp SPACE  &kp A      &kp S      &kp D      &kp F      &kp G                             &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SPACE
-&kp SPACE  &kp Z      &kp X      &kp C      &kp V      &kp B      &to 1       &kp ENTER  &kp N      &kp M      &kp COMMA  &kp DOT    &kp APOS   &kp SPACE
-                                 &kp TAB    &kp BSPC   &kp LSHFT  &kp LALT    &kp SPACE  &kp LCTRL  &kp COMMA  &kp DOT
+&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE   &kp SPACE                         &kp SPACE  &kp SPACE   &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+&kp SPACE  &kp Q      &kp W      &kp E      &kp R       &kp T                             &kp Y      &kp U       &kp I      &kp O      &kp P      &kp SPACE
+&kp SPACE  &kp A      &kp S      &kp D      &kp F       &kp G                             &kp H      &kp J       &kp K      &kp L      &kp SEMI   &kp SPACE
+&kp SPACE  &kp Z      &kp X      &kp C      &kp V       &kp B      &tog 1      &kp ENTER  &kp N      &kp M       &kp COMMA  &kp DOT    &kp APOS   &kp SPACE
+                                 &kp TAB    &kp DELETE  &kp LSHFT  &kp LALT    &kp SPACE  &kp LCTRL  &kp KP_DOT  &kp FSLH
             >;
-
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         num {
