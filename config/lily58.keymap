@@ -20,13 +20,13 @@
         skob {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <31 32>;
-            layers = <0 1 2>;
+            layers = <0 2 1>;
         };
 
         skobb {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <32 33>;
-            layers = <0 1 2>;
+            layers = <0 2 1>;
         };
 
         del {
@@ -60,17 +60,17 @@
         scoben {
             bindings = <&kp LEFT_BRACKET>;
             key-positions = <19 20>;
-            layers = <2>;
+            layers = <1>;
         };
 
         scobenn {
             bindings = <&kp RIGHT_BRACKET>;
             key-positions = <20 21>;
-            layers = <2>;
+            layers = <1>;
         };
 
         rusToEn {
-            bindings = <&to 2>;
+            bindings = <&to 1>;
             key-positions = <30 34>;
             layers = <0>;
         };
@@ -78,13 +78,13 @@
         enToRus {
             bindings = <&to 0>;
             key-positions = <30 34>;
-            layers = <2>;
+            layers = <1>;
         };
 
         questionEn {
             bindings = <&kp QUESTION>;
             key-positions = <19 21>;
-            layers = <2>;
+            layers = <1>;
         };
     };
 
@@ -132,8 +132,18 @@
 &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE   &kp SPACE                         &kp SPACE  &kp SPACE   &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
 &kp SPACE  &kp Q      &kp W      &kp E      &kp R       &kp T                             &kp Y      &kp U       &kp I      &kp O      &kp P      &kp SPACE
 &kp SPACE  &kp A      &kp S      &kp D      &kp F       &kp G                             &kp H      &kp J       &kp K      &kp L      &kp SEMI   &kp SPACE
-&kp SPACE  &kp Z      &kp X      &kp C      &kp V       &kp B      &sl 1       &kp ENTER  &kp N      &kp M       &kp COMMA  &kp DOT    &kp APOS   &kp SPACE
+&kp SPACE  &kp Z      &kp X      &kp C      &kp V       &kp B      &sl 2       &kp ENTER  &kp N      &kp M       &kp COMMA  &kp DOT    &kp APOS   &kp SPACE
                                  &kp TAB    &kp DELETE  &kp LSHFT  &kp LALT    &kp SPACE  &kp LCTRL  &kp KP_DOT  &kp FSLH
+            >;
+        };
+
+        en {
+            bindings = <
+&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE   &kp SPACE                         &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+&kp SPACE  &kp GRAVE  &kp BSLH   &kp SEMI   &kp P       &kp Y                             &kp F      &kp G      &kp C      &kp R      &kp L      &kp SPACE
+&kp SPACE  &kp A      &kp O      &kp E      &kp U       &kp I                             &kp D      &kp H      &kp T      &kp N      &kp S      &kp SPACE
+&kp SPACE  &kp APOS   &kp Q      &kp J      &kp K       &kp X      &sl 2       &kp ENTER  &kp B      &kp M      &kp W      &kp V      &kp Z      &kp SPACE
+                                 &kp TAB    &kp DELETE  &kp LSHFT  &kp LALT    &kp SPACE  &kp LCTRL  &kp COMMA  &kp DOT
             >;
         };
 
@@ -147,16 +157,6 @@
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        en {
-            bindings = <
-&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE   &kp SPACE                         &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-&kp SPACE  &kp GRAVE  &kp BSLH   &kp SEMI   &kp P       &kp Y                             &kp F      &kp G      &kp C      &kp R      &kp L      &kp SPACE
-&kp SPACE  &kp A      &kp O      &kp E      &kp U       &kp I                             &kp D      &kp H      &kp T      &kp N      &kp S      &kp SPACE
-&kp SPACE  &kp APOS   &kp Q      &kp J      &kp K       &kp X      &sl 1       &kp ENTER  &kp B      &kp M      &kp W      &kp V      &kp Z      &kp SPACE
-                                 &kp TAB    &kp DELETE  &kp LSHFT  &kp LALT    &kp SPACE  &kp LCTRL  &kp COMMA  &kp DOT
-            >;
         };
     };
 };
