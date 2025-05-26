@@ -20,13 +20,13 @@
         skob {
             bindings = <&kp LEFT_PARENTHESIS>;
             key-positions = <31 32>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         skobb {
             bindings = <&kp RIGHT_PARENTHESIS>;
             key-positions = <32 33>;
-            layers = <0 1>;
+            layers = <0 1 2>;
         };
 
         del {
@@ -65,7 +65,7 @@
 
         scobenn {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <19 20>;
+            key-positions = <20 21>;
             layers = <2>;
         };
 
@@ -78,11 +78,13 @@
         enToRus {
             bindings = <&to 0>;
             key-positions = <30 34>;
+            layers = <2>;
         };
 
         questionEn {
             bindings = <&kp QUESTION>;
-            key-positions = <19 20>;
+            key-positions = <19 21>;
+            layers = <2>;
         };
     };
 
@@ -152,7 +154,7 @@
 &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE   &kp SPACE                         &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
 &kp SPACE  &kp GRAVE  &kp BSLH   &kp SEMI   &kp P       &kp Y                             &kp F      &kp G      &kp C      &kp R      &kp L      &kp SPACE
 &kp SPACE  &kp A      &kp O      &kp E      &kp U       &kp I                             &kp D      &kp H      &kp T      &kp N      &kp S      &kp SPACE
-&kp SPACE  &kp APOS   &kp Q      &kp J      &kp K       &kp X      &tog 1      &kp ENTER  &kp B      &kp M      &kp W      &kp V      &kp Z      &kp SPACE
+&kp SPACE  &kp APOS   &kp Q      &kp J      &kp K       &kp X      &sl 1       &kp ENTER  &kp B      &kp M      &kp W      &kp V      &kp Z      &kp SPACE
                                  &kp TAB    &kp DELETE  &kp LSHFT  &kp LALT    &kp SPACE  &kp LCTRL  &kp COMMA  &kp DOT
             >;
         };
