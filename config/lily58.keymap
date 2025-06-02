@@ -14,7 +14,7 @@
         combo_esc {
             key-positions = <13 14>;
             bindings = <&kp ESC>;
-            layers = <0>;
+            layers = <0 1 2>;
         };
 
         skob {
