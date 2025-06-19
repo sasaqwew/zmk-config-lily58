@@ -161,11 +161,11 @@
 
         num {
             bindings = <
-&kp SPACE  &kp SPACE    &kp SPACE      &kp SPACE       &kp SPACE   &kp SPACE                          &kp SPACE        &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE      &kp SPACE
-&kp SPACE  &kp AT_SIGN  &kp AMPERSAND  &kp UP          &kp POUND   &kp DOLLAR                         &kp KP_ASTERISK  &kp N7     &kp N8     &kp N9     &kp KP_DIVIDE  &kp SPACE
-&kp SPACE  &kp PERCENT  &kp LEFT       &kp DOWN_ARROW  &kp RIGHT   &kp CARET                          &kp KP_PLUS      &kp N4     &kp N5     &kp N6     &kp MINUS      &kp SPACE
-&kp SPACE  &kp F1       &kp F2         &kp F6          &kp F4      &kp F5      &kp LALT    &kp ENTER  &kp NUMBER_0     &kp N1     &kp N2     &kp N3     &kp EQUAL      &kp SPACE
-                                       &kp TAB         &kp DELETE  &kp LSHFT   &kp LALT    &kp SPACE  &kp LCTRL        &kp COMMA  &kp DOT
+&kp SPACE  &kp SPACE    &kp SPACE      &kp SPACE       &kp SPACE   &kp SPACE                            &kp SPACE        &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE      &kp SPACE
+&kp SPACE  &kp AT_SIGN  &kp AMPERSAND  &kp UP          &kp POUND   &kp DOLLAR                           &kp KP_ASTERISK  &kp N7     &kp N8     &kp N9     &kp KP_DIVIDE  &kp SPACE
+&kp SPACE  &kp PERCENT  &kp LEFT       &kp DOWN_ARROW  &kp RIGHT   &kp CARET                            &kp KP_PLUS      &kp N4     &kp N5     &kp N6     &kp MINUS      &kp SPACE
+&kp SPACE  &kp F1       &kp F2         &kp F6          &kp F4      &kp F5      &kp LALT      &kp ENTER  &kp NUMBER_0     &kp N1     &kp N2     &kp N3     &kp EQUAL      &kp SPACE
+                                       &kp TAB         &kp DELETE  &kp LSHFT   &kp LS(F6)    &kp SPACE  &kp LCTRL        &kp COMMA  &kp DOT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
