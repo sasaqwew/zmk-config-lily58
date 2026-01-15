@@ -8,8 +8,7 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       revision: main
-      import: app/west.yml
-      
+      import: app/west.yml      
     - name: zmk-unicode
       remote: yourusername
       revision: main
