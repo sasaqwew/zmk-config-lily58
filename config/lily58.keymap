@@ -5,8 +5,8 @@
  */
 
 #include <behaviors.dtsi>
-#include <behaviors/unicode.dtsi>  // модуль zmk-unicode
 #include <dt-bindings/zmk/keys.h>
+#include <behaviors/unicode.dtsi>
 
 &uc {
   default-mode = <UC_MODE_WIN_COMPOSE>;
@@ -201,8 +201,8 @@
             //                     | ALT  | GUI  | LOWER|  SPACE |  | ENTER | RAISE| BSPC  | GUI   |
 
             bindings = <
-&kp A      &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE   &kp SPACE                         &kp SPACE  &kp SPACE   &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
-&kp SPACE  &kp Q      &kp W      &kp E      &kp R       &kp T                             &kp Y      &kp U       &kp I      &kp O      &kp P      &kp SPACE
+&kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE   &kp SPACE                         &kp SPACE  &kp SPACE   &kp SPACE  &kp SPACE  &kp SPACE  &kp SPACE
+&kp SPACE  &kp RU_EF  &kp W      &kp E      &kp R       &kp T                             &kp Y      &kp U       &kp I      &kp O      &kp P      &kp SPACE
 &kp SPACE  &kp A      &kp S      &kp D      &kp F       &kp G                             &kp H      &kp J       &kp K      &kp L      &kp SEMI   &kp SPACE
 &kp SPACE  &kp Z      &kp X      &kp C      &kp V       &kp B      &kp LALT    &kp ENTER  &kp N      &kp M       &kp COMMA  &kp DOT    &kp APOS   &kp SPACE
                                  &kp TAB    &kp DELETE  &kp LSHFT  &sl 2       &kp SPACE  &kp LCTRL  &kp KP_DOT  &kp FSLH
