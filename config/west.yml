@@ -9,9 +9,5 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml      
-    - name: zmk-unicode
-      remote: yourusername
-      revision: main
-      path: modules/zmk-unicode
   self:
     path: config
