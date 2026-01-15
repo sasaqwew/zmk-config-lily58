@@ -5,8 +5,56 @@
  */
 
 #include <behaviors.dtsi>
+#include <behaviors/unicode.dtsi>  // модуль zmk-unicode
 #include <dt-bindings/zmk/keys.h>
 
+&uc {
+  default-mode = <UC_MODE_WIN_COMPOSE>;
+  win-compose-key = <RALT>;   // по умолчанию так и есть, можно поменять
+};
+// Пара: (без Shift, с Shift)
+#define UPAIR(lo, hi) lo hi
+
+// --- EN (латиница) ---
+#define EN_A UPAIR(0x0061, 0x0041)
+#define EN_B UPAIR(0x0062, 0x0042)
+#define EN_C UPAIR(0x0063, 0x0043)
+// ... продолжи по аналогии до EN_Z (0x007A / 0x005A)
+
+// --- RU (кириллица) ---
+#define RU_A        UPAIR(0x0430, 0x0410) // а/А
+#define RU_BE       UPAIR(0x0431, 0x0411) // б/Б
+#define RU_VE       UPAIR(0x0432, 0x0412) // в/В
+#define RU_GHE      UPAIR(0x0433, 0x0413) // г/Г
+#define RU_DE       UPAIR(0x0434, 0x0414) // д/Д
+#define RU_IE       UPAIR(0x0435, 0x0415) // е/Е
+#define RU_IO       UPAIR(0x0451, 0x0401) // ё/Ё
+#define RU_ZHE      UPAIR(0x0436, 0x0416) // ж/Ж
+#define RU_ZE       UPAIR(0x0437, 0x0417) // з/З
+#define RU_I        UPAIR(0x0438, 0x0418) // и/И
+#define RU_SHORT_I  UPAIR(0x0439, 0x0419) // й/Й
+#define RU_KA       UPAIR(0x043A, 0x041A) // к/К
+#define RU_EL       UPAIR(0x043B, 0x041B) // л/Л
+#define RU_EM       UPAIR(0x043C, 0x041C) // м/М
+#define RU_EN       UPAIR(0x043D, 0x041D) // н/Н
+#define RU_O        UPAIR(0x043E, 0x041E) // о/О
+#define RU_PE       UPAIR(0x043F, 0x041F) // п/П
+#define RU_ER       UPAIR(0x0440, 0x0420) // р/Р
+#define RU_ES       UPAIR(0x0441, 0x0421) // с/С
+#define RU_TE       UPAIR(0x0442, 0x0422) // т/Т
+#define RU_U        UPAIR(0x0443, 0x0423) // у/У
+#define RU_EF       UPAIR(0x0444, 0x0424) // ф/Ф
+#define RU_HA       UPAIR(0x0445, 0x0425) // х/Х
+#define RU_TSE      UPAIR(0x0446, 0x0426) // ц/Ц
+#define RU_CHE      UPAIR(0x0447, 0x0427) // ч/Ч
+#define RU_SHA      UPAIR(0x0448, 0x0428) // ш/Ш
+#define RU_SHCHA    UPAIR(0x0449, 0x0429) // щ/Щ
+#define RU_HARD     UPAIR(0x044A, 0x042A) // ъ/Ъ
+#define RU_YERU     UPAIR(0x044B, 0x042B) // ы/Ы
+#define RU_SOFT     UPAIR(0x044C, 0x042C) // ь/Ь
+#define RU_E        UPAIR(0x044D, 0x042D) // э/Э
+#define RU_YU       UPAIR(0x044E, 0x042E) // ю/Ю
+#define RU_YA       UPAIR(0x044F, 0x042F) // я/Я
 / {
     combos {
         compatible = "zmk,combos";
